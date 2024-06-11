@@ -4,7 +4,10 @@ public class Iphone implements AparelhoTelefonico, ReprodutorMusical, NavegadorI
 
     public void ligar(String numero){
         System.out.println("Ligando para " + numero);
-        atender();
+        atendeu();
+    }
+    public void atender(){
+        System.out.println("Chamada Recebida atendida");
     }
     private static boolean tocando(){
         boolean atendeu = new Random().nextInt(3)==1;
@@ -12,7 +15,7 @@ public class Iphone implements AparelhoTelefonico, ReprodutorMusical, NavegadorI
         return atendeu;
     }
 
-    private void atender(){
+    private void atendeu(){
         int tentativas = 0;
         boolean atendido = false;
         

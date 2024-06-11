@@ -4,6 +4,7 @@ public class Usuario {
         ReprodutorMusical reprodutorMusical = new Iphone();
         NavegadorInternet navegadorInternet = new Iphone();
 
+        aparelhoTelefonico.atender();
         aparelhoTelefonico.ligar("+55 85 8888-9999");
         reprodutorMusical.selecionarMusica("Havana");
         reprodutorMusical.pausar();
