@@ -8,10 +8,12 @@ public class Banco {
 
     private String nome;
     private List<Conta> contaList;
+    Set<Conta> contasSet;
 
     public Banco(String nome) {
         this.nome = nome;
         this.contaList = new ArrayList<>();
+        this.contasSet = new HashSet<>();
     }
 
     public void adicionarContaCC (ContaCorrente conta){
