@@ -92,6 +92,8 @@ public class ClienteServiceImpl implements ClienteService {
 	}
 
 	private void salvarClienteAgenda(Cliente cliente) {
+		Agenda agendaRep = cliente.getAgenda();
+		agendaRepository.save(agendaRep);
 		long agendaId = cliente.getAgenda().getId();
 		Optional<Agenda> agenda = agendaRepository.findById(agendaId);
 		cliente.setAgenda(agenda.get());
@@ -99,6 +101,8 @@ public class ClienteServiceImpl implements ClienteService {
 	}
 
 	private void salvarClienteContato(Cliente cliente) {
+		Contato contatoRep = cliente.getContato();
+		contatoRepository.save(contatoRep);
 		long contatoId = cliente.getContato().getId();
 		Optional<Contato> contato = contatoRepository.findById(contatoId);
 		cliente.setContato(contato.get());
